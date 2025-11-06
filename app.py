@@ -174,7 +174,7 @@ elif st.session_state.step == 2:
             )
 
         with col_btn:
-            if st.button("선택", key=f"btn_{opt['id']}"):
+            if st.button("Select", key=f"btn_{opt['id']}"):
                 st.session_state.childhood = opt["id"]
                 st.session_state.step = 3
                 st.rerun()
@@ -223,7 +223,7 @@ elif st.session_state.step == 3:
                     unsafe_allow_html=True
                 )
             with col_btn:
-                if st.button("선택", key=f"rel_{opt['id']}"):
+                if st.button("Select", key=f"rel_{opt['id']}"):
                     st.session_state.child_relationship = opt["id"]
                     st.session_state.step = 4
                     st.rerun()
@@ -330,7 +330,7 @@ elif st.session_state.step == 5:
             )
 
         with col_btn:
-            if st.button("선택", key=opt["id"]):
+            if st.button("Select", key=opt["id"]):
                 st.session_state.scn_call = opt["id"]
 
                 # ✅ go to next step
@@ -380,7 +380,7 @@ elif st.session_state.step == 6:
             )
 
         with col_btn:
-            if st.button("선택", key=opt["id"]):
+            if st.button("Select", key=opt["id"]):
                 st.session_state.scn_whisper = opt["id"]
                 st.session_state.purushartha_whisper = opt["id"]
                 # ✅ go to next step
@@ -440,7 +440,7 @@ elif st.session_state.step == 7:
             )
 
         with col_btn:
-            if st.button("선택", key=opt["id"]):
+            if st.button("Select", key=opt["id"]):
                 st.session_state.soul_origin = opt["id"]
                 st.session_state.step = 8
                 st.rerun()
@@ -529,7 +529,7 @@ elif st.session_state.step == 8:
             )
 
         with col_btn:
-            if st.button("선택", key=f"btn_{opt['id']}"):
+            if st.button("Select", key=f"btn_{opt['id']}"):
                 st.session_state.solitude = opt["id"]
                 st.session_state.step = 9
                 st.rerun()
@@ -612,7 +612,7 @@ elif st.session_state.step == 9:
             )
 
         with col_btn:
-            if st.button("선택", key=opt["id"]):
+            if st.button("Select", key=opt["id"]):
                 st.session_state.scn_righteous = opt["id"]
                 st.session_state.purushartha_righteous = opt["id"]
                 # ✅ go to next step
@@ -694,7 +694,7 @@ elif st.session_state.step == 10:
             )
         
         with col_btn:
-            if st.button("선택", key=f"conf_{opt['id']}"):
+            if st.button("Select", key=f"conf_{opt['id']}"):
                 st.session_state.scn_confusion = opt["id"]
                 st.session_state.step = 11
                 st.rerun()
@@ -771,7 +771,7 @@ elif st.session_state.step == 11:
             )
 
         with col_btn:
-            if st.button("선택", key=f"lifeshift_{opt['id']}"):
+            if st.button("Select", key=f"lifeshift_{opt['id']}"):
                 st.session_state.life_shift_timing = opt["id"]
 
                 # Routing logic
@@ -851,7 +851,7 @@ elif st.session_state.step == 12:
             )
 
         with col_btn:
-            if st.button("선택", key=f"q6_{opt['id']}"):
+            if st.button("Select", key=f"q6_{opt['id']}"):
                 st.session_state.life_shift_mood = opt["id"]
 
                 st.session_state.step = 13
@@ -933,7 +933,7 @@ elif st.session_state.step == 13:
             )
         
         with col_btn:
-            if st.button("선택", key=f"conf_{opt['id']}"):
+            if st.button("Select", key=f"conf_{opt['id']}"):
                 st.session_state.scn_abyss = opt["id"]
                 st.session_state.purushartha_abyss = opt["id"]
                 st.session_state.step = 14
@@ -1016,7 +1016,7 @@ elif st.session_state.step == 14:
             )
 
         with col_btn:
-            if st.button("선택", key=opt["id"]):
+            if st.button("Select", key=opt["id"]):
                 st.session_state.scn_temptation = opt["id"]
                 # ✅ go to next step
                 st.session_state.step = 15  
@@ -1064,7 +1064,7 @@ elif st.session_state.step == 15:
             )
 
         with col_btn:
-            if st.button("선택", key=opt["id"]):
+            if st.button("Select", key=opt["id"]):
                 st.session_state.purushartha = opt["id"]
                 # ✅ go to next step
                 st.session_state.step = 16 
@@ -1271,4 +1271,5 @@ elif st.session_state.step == 17:
     """, unsafe_allow_html=True)
 
     for s, e, _ in segments:
+
         st.markdown(f"<div class='result-text'>{s} → {e}</div>", unsafe_allow_html=True)
