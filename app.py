@@ -810,9 +810,7 @@ elif st.session_state.step == 12:
     unknown_opt = {
         "id": "unknown",
         "text": (
-            "위 항목 중에서는 잘 모르겠다.\n"
-            "분명 변화는 있었던 것 같은데,\n"
-            "딱 맞는 느낌은 떠오르지 않는다."
+            "“I’m not sure. Something changed, but it’s hard to describe.”"
         )
     }
     filtered_opts.append(unknown_opt)
@@ -1273,3 +1271,4 @@ elif st.session_state.step == 17:
     for s, e, _ in segments:
 
         st.markdown(f"<div class='result-text'>{s} → {e}</div>", unsafe_allow_html=True)
+
