@@ -810,7 +810,7 @@ elif st.session_state.step == 12:
     unknown_opt = {
         "id": "unknown",
         "text": (
-            "“I’m not sure. Something changed, but it’s hard to describe.”"
+            "I’m not sure. Something changed, but it’s hard to describe."
         )
     }
     filtered_opts.append(unknown_opt)
@@ -1271,4 +1271,5 @@ elif st.session_state.step == 17:
     for s, e, _ in segments:
 
         st.markdown(f"<div class='result-text'>{s} → {e}</div>", unsafe_allow_html=True)
+
 
